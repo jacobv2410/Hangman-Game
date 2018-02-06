@@ -13,7 +13,8 @@ var shownLetters = 0;
 
 var gamePieces = ['.postUp','.floor','.postRight','.rope','.head','.body','.leftArm','.rightArm','.leftLeg','.rightLeg'];
 
-var x = document.getElementById("myAudio"); 
+// I attempted to make an audio sound play if you won, but could not quite figure it out. 
+// var x = document.getElementById("myAudio"); 
 
 var winner = '<div class="endGame">'+
   '<h1>You Win!</h1>' +
@@ -116,9 +117,6 @@ $(window).keypress(function(e) {
           gameHasEnded = true;
            $('body').contents().fadeOut(2000);
           $('body').append(winner).fadeIn(4000);
-        //   function playAudio() {
-        //       x.play();
-        //   }
           reloadEvent();
         }
 
